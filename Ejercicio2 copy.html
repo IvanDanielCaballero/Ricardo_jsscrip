@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos</title>
+    <script src="alum.js"></script>
+    <style>
+     
+    </style>
+</head>
+<body>
+
+   
+    <button onclick="registrarAlumno()">Registrar Alumno</button>
+
+   
+  
+</body>
+</html>
+
+
+<script>
+      map = new Map([...map, ...creacionPersona('maria', 25, 1990, 'xd', 'yep cosa')]);
+            map = new Map([...map, ...creacionPersona('jose', 15, 1996, 'po', 'Otra xd')]);
+            map = new Map([...map, ...creacionPersona('jose', 15, 1996, 'po', 'Otra xd')]);
+            map = new Map([...map, ...creacionPersona('inma', 20, 1990, 'Algo', 'Otra cosa')]);
+</script>
+
+// —---------------------------------------
+   
+    class Alumno {
+        constructor(nombre, edad, asignaturas) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.asignaturas = [...asignaturas.split(',')];
+        }
+
+
+        mostrarInformacion() {
+            return `Nombre: ${this.nombre},
+                    Edad: ${this.edad},
+                    Asignaturas: ${this.asignaturas.join(', ')}`;
+        }
+    }
+
+
+    let mapaAlumnos = new Map();
+
+
+    function registrarAlumno() {
+        let nombre = document.getElementById("nombre").value;
+        let edad = parseInt(document.getElementById("edad").value);
+        let asignaturas = document.getElementById("asignaturas").value;
+
+
+        if (nombre && !isNaN(edad) && asignaturas) {
+            let nuevoAlumno = new Alumno(nombre, edad, asignaturas);
+            mapaAlumnos.set(nombre, nuevoAlumno);
+            alert("Alumno registrado");
+        } else {
+            alert("Completa los datos correctamente");
+        }
+    }
+
+
+    /* function mostrarAlumnos() {
+        let nombreAlumno = prompt("Ingrese el nombre del alumno:");
+
+
+        if (mapaAlumnos.has(nombreAlumno)) {
+            let alumno = mapaAlumnos.get(nombreAlumno);
+            alumno.mostrarInformacion();
+        } else {
+            alert("El alumno no fue encontrado.");
+        }
+    } */
+
+
+    function mostrarAlumnos() {
+        let listaAlumnosElement = document.getElementById("listaAlumnos");
+        listaAlumnosElement.innerHTML = "";
+   
+        for (let [nombre, alumno] of mapaAlumnos) {
+            let listItem = document.createElement("li");
+            listItem.textContent = alumno.mostrarInformacion();
+            listaAlumnosElement.appendChild(listItem);
+        }
+    }
+

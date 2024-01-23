@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+
+        //que le pases un array de numero yu te devuleva una rray de numero donde 
+        //en cada posicionestara el tamaño de digitos que tiene cada numero
+
+        let dato = [22, 123, 9, 2323];
+        function calcular_digito(x) {
+
+            let digito = x.toString();
+            return digito.length;
+        }
+        let digitos = dato.map(calcular_digito);
+
+
+    
+        console.log(digitos);
+
+
+
+
+
+
+
+
+        dato.forEach((c, i, a) => (a[i] = c + 2))
+        console.log(dato);
+
+
+        let copia = dato.map(x => x * 2);
+        console.log(copia);
+
+
+        function doblar(x) {
+            return x * 2;
+
+
+
+        }
+
+
+
+
+        console.log(copia);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

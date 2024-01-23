@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+
+//PROPUESTO 11
+
+ciudades = new map();
+
+ciudades.set('yecla', [23.32,43.42]);
+ciudades.set('barcelona', [23.32,43.42]);
+ciudades.set('madrid', [23.32,43.42]);
+ciudades.set('sevilla', [23.32,43.42]);
+ciudades.set('murcia', [23.32,43.42]);
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+//PROPUESTO 9
+
+        var arraytridi = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        var arraytridicontra=[[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+        for (let i in arraytridi) {
+
+            for (let i2 in arraytridi[i]) {
+                arraytridicontra[i2][i]=arraytridi[i][i2];
+            }
+
+
+
+        }
+        for (let i in arraytridicontra) {
+
+            for (let i2 in arraytridicontra[i]) {
+                document.write(`posicion ${i},${i2} el numero ${arraytridicontra[i][i2]} <br>`);
+
+            }
+        }
+        */
+        /*
+               
+                        // PROPUESTOS 8 
+                
+                        var arrayquinti = [[21, 2, 3, 4], [45, 32, 22, 9], [0, 66, 7, 4], [-3, 32, 11, 90], [59, -2, -63, 15]];
+                        var Arrayunidimen = Array();
+                
+                        for (var pri in arrayquinti) {
+                            for (var seg in arrayquinti[pri]) {
+                
+                                Arrayunidimen.push(arrayquinti[pri][seg]);
+                            }
+                
+                        }
+                
+                        for (var numero of Arrayunidimen) {
+                            document.write(numero+', ');
+                        }
+                
+              */
+        /*
+        
+                //propuesto cinco, SEIS , SIETE mejorar
+        
+                var posiciones = Array();
+                let numeros = [1, 2, 3, 1, 5, 3, 5, 2];
+        
+                for (let i = 0; i < numeros.length; i++) {
+        
+                    for (let e = 0; e < numeros.length; e++) {
+        
+                        if (numeros[i] == numeros[e]) {
+        
+                            posiciones.push(e);
+        
+                        }
+        
+                    }
+        
+                    document.write(numeros[i] + ' se repite ');
+                    document.write('en las posiciones ' +posiciones)
+                    document.write('<br>')
+                    posiciones.splice(0,posiciones.length);
+                }
+        */
+        /*
+        
+                //PROPUESTO CUATRO
+                let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        
+                for (let index = 0; index < numeros.length; index++) {
+        
+                    if (numeros[index] % 3 == 0) {
+                        document.write(' los multiplos de 3 son ' + numeros[index] + '<br>');
+        
+                    }
+        
+                }
+        */
+        /*
+                //PROPUESTO 3 mejorar
+        
+        
+                let numeros1 = [1, 2, 3, 4, 5, 6, 7];
+                let numeros2 = [1, 2, 3, 4, 5, 6, 7];
+        
+                $indice = 0;
+                if (numeros1.length - 1 == numeros2.length - 1) {
+        
+                    for (let index = 0; index < numeros1.length - 1; index++) {
+        
+        
+                        if (numeros1[$indice] != numeros2[$indice] ) {
+        
+                            $respuesta = 'los arrays no son iguales';
+                        }
+        
+                    }
+        
+                }
+        
+        */
+        /*
+        PROPUESTO DOS
+        const arrayrespue = Array();
+        const arrayreve = Array();
+        var respuesta = true;
+
+
+        while (respuesta) {
+
+            respuesta = prompt("inserta un numero, cancelar para salir");
+
+            if (!isNaN(respuesta) && respuesta != null) {
+                console.log(respuesta);
+                arrayrespue.push(Number(respuesta));
+            }
+
+
+
+
+
+        }
+
+
+        for (let index = arrayrespue.length - 1; index >= 0; index--) {
+            document.write(arrayrespue[index])
+
+        }
+*/
+        /*
+        PROPUESTO UNO
+                let ciclistas = [
+                    [1, "Primoz Roglic", "Jumbo-Visma", "3:36:40"],
+                    [2, "Jonas Vingegaard", "Jumbo-Visma", "m.t."],
+                    [3, "Sepp Kuss", "Jumbo-Visma", "+0:19"],
+                    [4, "Mikel Landa", "Bahrain-Victorious", "+0:19"]
+        
+                ];
+        
+        
+                for (var i in ciclistas) {
+                    document.write(ciclistas[i][i], "<br>")
+        
+                }
+                document.write("<br>");
+                for (var i in ciclistas) {
+        
+                    document.write(ciclistas[i][ciclistas.length - i - 1], "<br>")
+        
+                }
+        */
+    </script>
+
+</body>
+
+</html>

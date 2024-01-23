@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUER</title>
+
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        p:hover {
+            background-color: blue;
+
+
+        }
+
+        p {
+            background-color: blueviolet;
+            border: 5px solid gold;
+            color: white;
+            width: 300px;
+            text-align: center;
+        }
+
+        div {
+            border: 3px solid black;
+            margin: 1em;
+            padding: 1em;
+            background-color: rebeccapurple;
+            color: white;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="caja" type="text" disabled>
+    <p>activa</p>
+
+    <p>Listar atributos</p>
+
+
+    <p>escribir en input</p>
+
+    <div id="atributos"> </div>
+
+    <span><strong>hola</strong> soy yo</span>
+
+
+    <script>
+       // alert(document.getElementsByTagName('span')[0].textContent)
+
+        document.getElementsByTagName('p')[0].addEventListener('click', activacion);
+        function activacion(e) {
+            let caja = document.getElementById('caja');
+            caja.toggleAttribute('disabled')
+
+            
+        }
+
+
+        document.getElementsByTagName('p')[1].addEventListener('click', e => {
+            let caja = document.getElementById('caja');
+            //let caja2 = document.getElementById('caja2').value='hola';
+          
+            for (let e of caja.attributes) {
+                let atributos = document.getElementById('atributos');
+                atributos.innerHTML += ' <strong>atributos</strong> ' + e.name + ': ' + e.value + '<br>';
+            }
+        } );
+
+       
+        document.getElementsByTagName('p')[2].addEventListener('click', e => {
+           
+
+        } );
+
+
+    </script>
+
+
+</body>
+
+</html>

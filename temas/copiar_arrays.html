@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+
+    <script>
+
+        //hacer un script en el que hay un array de numeros, utilizar un promt y nos pide dos numeros
+        // el primero el que quiero buscar en el array y el segundo por cual lo quiero sustituir
+
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5];
+
+        var numbuscar = prompt("inserta el numero que quieras buscar");
+        var numreemplazar = prompt("inserta lo que quieras reemplazar");
+        var respuesta = numeros.indexOf(Number(numbuscar));
+
+        while (respuesta != -1 && numbuscar!=null) {
+
+            numeros[respuesta] = numreemplazar;
+            respuesta = numeros.indexOf(Number(numbuscar));
+
+        }
+
+        
+
+
+        document.write(numeros);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+                let dd2 = [[1, 2], [3, 4]];
+                let dd2c = [...dd2];
+        
+        
+        
+                dd2cadena = JSON.stringify(dd2);
+        
+                dd2c = JSON.parse(dd2cadena);
+        
+                dd2[0][0] = 'ivan';
+        
+                for (let filas of dd2c) {
+                    for (let celda of filas) {
+                        document.write(celda, "<br>")
+        
+                    }
+                }
+        
+                document.write("<br>");
+                for (let filas of dd2) {
+                    for (let celda of filas) {
+                        document.write(celda, "<br>")
+        
+                    }
+                }
+        */
+        /*
+                const vehiculos = ['masseratui', 'lambo', 'ambulancia', 'coche'];
+                let copia_vehi = [...vehiculos]; //asi se copia en este ejemplo
+                copia_vehi[0] = "tractor";
+        
+                for (let vehi of copia_vehi) {
+                    document.write(vehi, "<br>");
+                }
+        
+        
+                document.write("<br>");
+                for (let vehi of vehiculos) {
+                    document.write(vehi, "<br>");
+                }
+        */
+        /*
+                const colores = ['verde', 'azul','naranja', 'amarillo'];
+                let copia_colores;
+        
+                copia_colores = colores.slice();
+                copia_colores[0] = 'VERDE';
+        
+                for (let color of copia_colores) {
+                    document.write(color, "<br>");
+                }
+        
+        
+                document.write("<br>");
+                for (let color of colores) {
+                    document.write(color, "<br>");
+                }
+        */
+        /*
+                const numeros = [1, 2, 3, 4];
+        
+                let copia_numeros;
+        
+                copia_numeros = [].concat(numeros);  // esto sirve para copiar un array(numeros) a un array vacio (copia_numeros)
+        
+        
+                copia_numeros[0]="waheijhwa";
+                for (let numero of copia_numeros) {
+                    document.write(numero,"<br>");
+                }
+        
+                for (let numero of numeros) {
+                    document.write(numero,"<br>");
+                }
+        
+        
+        */
+        /*
+                const numeros = [1,2,3,4];
+        
+               //document.write(numeros);
+                const copia_numeros=numeros;
+        
+                numeros[2] = "luis";
+        
+                for (let numero of copia_numeros) {
+                    document.write(numero);
+                }
+        */
+
+
+    </script>
+
+</body>
+
+</html>

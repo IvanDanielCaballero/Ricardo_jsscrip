@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUER</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #contenedor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+        }
+
+        #miDiv {
+            display: flex;
+            background-color: rebeccapurple;
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <div id="miDiv"></div>
+
+        <h2> seleciona un color </h2>
+        <input type="color" name="colorinput" id="colorinput">
+        <button id="boton_borrar">borrar la cookie</button>
+
+    </div>
+
+
+    <script>
+
+        if (document.cookie) {
+            //sacar una cookie
+            let colorfondo = document.cookie.split('=')[1];
+            let midiv = document.getElementById('miDiv');
+            midiv.setAttribute('style', 'background-color:' + colorfondo + ';');
+
+        }
+
+        document.getElementById('boton_borrar').addEventListener('click', borrarcookie);
+
+        document.getElementById('colorinput').addEventListener('change', cambiarcolor);
+
+        function cambiarcolor(e) {
+
+            let color = document.getElementById('colorinput').value;
+            let midiv = document.getElementById('miDiv');
+            midiv.setAttribute('style', 'background-color:' + color + ';');
+            //crear cookie
+            let colorcookie = 'colorcookie';
+            document.cookie = colorcookie + "=" + color + ";";
+        }
+
+        function borrarcookie(e) {
+            document.cookie = 'colorcookie=red; expires='+new Date();
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

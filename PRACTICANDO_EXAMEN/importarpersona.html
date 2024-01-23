@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos</title>
+    <script src="main.js"></script> <!-- Importa tu archivo JavaScript principal -->
+</head>
+
+<body>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad">
+
+    <label for="ano-nacimiento">Año de Nacimiento:</label>
+    <input type="number" id="ano-nacimiento">
+
+    <label for="cosa1">Cosa 1:</label>
+    <input type="text" id="cosa1">
+
+    <label for="cosa2">Cosa 2:</label>
+    <input type="text" id="cosa2">
+
+
+    <button id="add">Agregar Persona</button>
+
+
+    <script>
+        document.getElementById('add').addEventListener('click', handleCrearPersona);
+
+        function handleCrearPersona() {
+            let nombre = document.getElementById('nombre').value;
+            let edad = document.getElementById('edad').value;
+            let anoNacimiento = document.getElementById('ano-nacimiento').value;
+            let cosa1 = document.getElementById('cosa1').value;
+            let cosa2 = document.getElementById('cosa2').value;
+
+            // Llama a la función de creación de persona con los datos recolectados
+            let persona = new Map();
+            if (persona.size === 0) {
+                persona = creacionPersona(nombre, edad, anoNacimiento, cosa1, cosa2);
+            } else {
+                persona = new Map([...creacionPersona(nombre, edad, anoNacimiento, cosa1, cosa2), ...persona]);
+            }
+
+
+
+            // Aquí puedes realizar operaciones con la persona creada si lo necesitas
+            console.log(persona);
+            // Por ejemplo, mostrar la información en una tabla
+            mostrarEnTabla(persona);
+        }
+    </script>
+    <div id="tabla-contenedor">
+        <!-- Aquí se mostrará la tabla de personas -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        class carton {
+
+            tabla = [new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set()]
+
+
+            constructor() {
+                let contador = 0;
+
+
+
+                while (contador < 19) {
+
+                    let numero = Math.round(Math.random() * 89);
+                    let columna = Math.floor(numero / 10);
+
+                    if (this.tabla[columna].size < 2 && !this.tabla[columna].has(numero + 1)) {
+
+                        this.tabla[columna].add(numero);
+                        contador++;
+                    }
+
+                }
+                let final = [];
+
+                for (let i in this.tabla) {
+                    final.push(Array.from(this.tabla[i]).sort());
+                    final[i].splice(Math.round(Math.random() * 3), 0, 'nada')
+                }
+
+                this.tabla = new Array();
+                this.tabla = final;
+
+
+            }
+            comprobar(numero) {
+                let columna = Math.floor(numero / 10);
+                let respuesta = '';
+                if (this.tabla[columna].indexOf(numero) != -1) {
+                    respuesta = 'esta';
+
+                    this.tabla[columna].indexOf(numero) = 'x';
+                } else {
+                    respuesta = ' no esta';
+                }
+
+                return respuesta;
+            }
+
+
+            mostrar() {
+
+                console.log(this.tabla);
+            }
+
+
+
+        }
+
+
+        let t1 = new carton();
+
+        console.log(t1.mostrar());
+
+
+
+
+
+        /*
+        
+                function generarCarton() {
+                    let carton = [];
+                    while (carton.length < 8) {
+                        let fila = [];
+        
+                        while (fila.length < 4) {
+                            let numero = Math.floor(Math.random() * 80) + 1;
+                            if (!fila.includes(numero)) {
+                                fila.push(numero);
+                            }
+                        }
+                        carton.push(fila);
+                    }
+                    return carton;
+                }
+        
+        
+        
+        
+        
+        
+        
+        
+                function generarCartones() {
+                    const cartones = [];
+                    for (let i = 0; i < 5; i++) {
+                        cartones.push(generarCarton());
+                    }
+                    return cartones;
+                }
+        
+                function sortearBola(bolasSacadas) {
+                    let bola;
+                    do {
+                        bola = Math.floor(Math.random() * 90) + 1;
+                    } while (bolasSacadas.includes(bola));
+                    bolasSacadas.push(bola);
+                    return bola;
+                }
+        
+                function comprobarBingo(carton) {
+                    return carton.every(fila => fila.every(numero => numerosSacados.includes(numero)));
+                }
+        
+                function jugarBingo() {
+                    const cartones = generarCartones();
+                    const numerosSacados = [];
+                    let hayGanador = false;
+                    let ganador = null;
+        
+                    while (!hayGanador) {
+                        const bola = sortearBola(numerosSacados);
+                        console.log("Ha salido el número:", bola);
+        
+                        cartones.forEach((carton, index) => {
+                            if (comprobarBingo(carton)) {
+                                hayGanador = true;
+                                ganador = index + 1;
+                            }
+                        });
+        
+                        if (hayGanador) {
+                            console.log(`¡Tenemos un ganador! El cartón ${ganador} ha hecho Bingo.`);
+                        }
+                    }
+                }
+        
+        */
+
+
+    </script>
+
+</body>
+
+</html>

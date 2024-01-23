@@ -1,0 +1,57 @@
+{
+    "pilotos": [
+      {
+        "nombre": "Lewis Hamilton",
+        "equipo": "Mercedes",
+        "imagen": "url_imagen_lewis_hamilton.jpg",
+        "resultados": [
+          {"carrera": "Gran Premio de Austria", "posicion": 4},
+          {"carrera": "Gran Premio de Estiria", "posicion": 1},
+          {"carrera": "Gran Premio de Hungría", "posicion": 1}
+        ]
+      },
+      {
+        "nombre": "Max Verstappen",
+        "equipo": "Red Bull Racing",
+        "imagen": "url_imagen_max_verstappen.jpg",
+        "resultados": [
+          {"carrera": "Gran Premio de Austria", "posicion": 3},
+          {"carrera": "Gran Premio de Estiria", "posicion": 2},
+          {"carrera": "Gran Premio de Hungría", "posicion": 7}
+        ]
+      },
+      {
+        "nombre": "Valtteri Bottas",
+        "equipo": "Mercedes",
+        "imagen": "url_imagen_valtteri_bottas.jpg",
+        "resultados": [
+          {"carrera": "Gran Premio de Austria", "posicion": 1},
+          {"carrera": "Gran Premio de Estiria", "posicion": 4},
+          {"carrera": "Gran Premio de Hungría", "posicion": 2}
+        ]
+      },
+      {
+        "nombre": "Carlos Sainz",
+        "equipo": "McLaren",
+        "imagen": "url_imagen_carlos_sainz.jpg",
+        "resultados": [
+          {"carrera": "Gran Premio de Austria", "posicion": 6},
+          {"carrera": "Gran Premio de Estiria", "posicion": 5},
+          {"carrera": "Gran Premio de Hungría", "posicion": 8}
+          
+        ]
+      },
+      {
+        "nombre": "Fernando Alonso",
+        "equipo": "Renault",
+        "imagen": "url_imagen_fernando_alonso.jpg",
+        "resultados": [
+          {"carrera": "Gran Premio de Austria", "posicion": 9},
+          {"carrera": "Gran Premio de Estiria", "posicion": 10},
+          {"carrera": "Gran Premio de Hungría", "posicion": 6}
+          
+        ]
+      }
+    ]
+  }
+  

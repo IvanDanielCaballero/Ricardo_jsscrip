@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clasificacion Ciclistas</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let expDNI2 = new RegExp('[0-9]{8}[A-Z]')
+
+        //ELEMENTOS DE LAS EXPRESIONES REGULARES
+
+
+        //LA LINEA COMIENZA POR 
+        let exp1 = /^c/;
+        console.log(exp1.test('casa'))
+        console.log(exp1.test('acsa'))
+        console.log('<br>')
+
+        //LA LINEA TERMINA POR 
+        let exp2 = /a$/i;
+        console.log(exp2.test('casa'))
+        console.log(exp2.test('acaa'))
+        console.log('<br>')
+
+        //CUALQUIER CARACTER
+        let exp3 = /a.a/i;
+        console.log(exp3.test('casaoa'))
+        console.log(exp3.test('acya a'))
+        console.log('<br>')
+
+        //CUALQUIER EN LA LISTA
+        let exp4 = /^[isfk]/i;
+        console.log(exp4.test('mh'))
+        console.log(exp4.test('isfk'))
+        console.log('<br>')
+
+
+        //MULTIPLES EN LA LISTA 
+        let exp5 = /[a-z0-9]/;
+        console.log(exp5.test('mh9'))
+        console.log(exp5.test('isfk'))
+        console.log('<br>')
+
+        //MULTIPLES EN LA LISTA 'NEGACION'
+        let exp6 = /[^ty9]/;
+        console.log(exp6.test('h'))
+        console.log(exp6.test('t'))
+        console.log('<br>')
+
+
+
+        //EJEMPLO 1
+        let expre7 = /^[^a-z]/;
+        console.log(expre7.test('ALA'))
+        console.log(expre7.test('aLA'))
+        console.log('<br>')
+
+        //SIMBOLOS DE CARDINALIDAD O REPETICION
+        //(siempre afeectan al caracter o expresion que lo precede)
+
+
+        let exp8 = /i(as)*/;
+        console.log(exp8.test('iasass'))
+        console.log(exp8.test('assa'))
+        console.log('<br>')
+
+
+        let exp9 = /^.{5}$/;
+        console.log(exp9.test('aetra'))
+        console.log(exp9.test('assaefefef'))
+        console.log('<br>')
+
+
+        let exp10 = /(aio|auo){3}/;
+        console.log(exp10.test('aioaioaio'))
+        console.log(exp10.test('assaefefef'))
+        console.log('<br>')
+
+        //
+
+
+        let exp11 = /casa/;
+        console.log(exp10.test('hola casa dos'))
+        console.log(exp10.test('assaefefef'))
+        console.log('<br>')
+
+
+
+
+
+
+        let cadena2 = 'piso';
+        let cadena1 = 'la casa de pepe es una casa casa casa es bonita';
+        let cadena3 = 'casa'
+        let resu = "";
+        let anterior = cadena1;
+
+
+
+        resu = cadena1.replace(cadena3, cadena2)
+        while (resu != anterior) {
+           
+            document.write(resu)
+            document.write('<br>')
+            anterior = resu;
+            resu = anterior.replace(cadena3, cadena2)
+        }
+
+
+
+        /*
+        hacer un programa que busque en la cedena uno la cadena 2 y la ustitu por la cadena 2
+        la casa de pepe es bonita 
+
+        cadena 2=Piso 
+
+        replace
+        */
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

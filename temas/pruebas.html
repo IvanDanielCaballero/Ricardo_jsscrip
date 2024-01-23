@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+
+
+
+
+
+        function generarCarton() {
+            let carton = [];
+            while (carton.length < 8) {
+                let fila = [];
+
+                while (fila.length < 4) {
+                    let numero = Math.floor(Math.random() * 80) + 1;
+                    if (!fila.includes(numero)) {
+                        fila.push(numero);
+                    }
+                }
+                carton.push(fila);
+            }
+            return carton;
+        }
+
+
+
+
+
+        
+
+
+        function generarCartones() {
+            const cartones = [];
+            for (let i = 0; i < 5; i++) {
+                cartones.push(generarCarton());
+            }
+            return cartones;
+        }
+
+        function sortearBola(bolasSacadas) {
+            let bola;
+            do {
+                bola = Math.floor(Math.random() * 90) + 1;
+            } while (bolasSacadas.includes(bola));
+            bolasSacadas.push(bola);
+            return bola;
+        }
+
+        function comprobarBingo(carton) {
+            return carton.every(fila => fila.every(numero => numerosSacados.includes(numero)));
+        }
+
+        function jugarBingo() {
+            const cartones = generarCartones();
+            const numerosSacados = [];
+            let hayGanador = false;
+            let ganador = null;
+
+            while (!hayGanador) {
+                const bola = sortearBola(numerosSacados);
+                console.log("Ha salido el número:", bola);
+
+                cartones.forEach((carton, index) => {
+                    if (comprobarBingo(carton)) {
+                        hayGanador = true;
+                        ganador = index + 1;
+                    }
+                });
+
+                if (hayGanador) {
+                    console.log(`¡Tenemos un ganador! El cartón ${ganador} ha hecho Bingo.`);
+                }
+            }
+        }
+
+        
+        jugarBingo();
+
+        
+
+
+
+
+
+
+        /*
+                function caracteresNoAlfabeticosEsp(arrayCadenas) {
+                    const alfabetoEspanol = /[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]/;
+        
+                    return arrayCadenas.filter(cadena => {
+                        for (let i = 0; i < cadena.length; i++) {
+                            const charCode = cadena.charCodeAt(i);
+                            if (!alfabetoEspanol.test(cadena[i])) {
+                                return true; // Devuelve true si encuentra un carácter que no está en el alfabeto español.
+                            }
+                        }
+                        return false;
+                    });
+                }
+        
+                // Ejemplo de uso
+                const palabras = ["$o", "&.", "necesito", "que", "sea", "probado", "así"];
+        
+                let resultado = caracteresNoAlfabeticosEsp(palabras);
+                console.log("Palabras con caracteres no alfabéticos en español:", resultado);
+        
+        
+        ///hecho por mi 
+        
+        
+        
+        
+                function operacionesNumericas(...numeros) {
+                    if (numeros.length < 4) {
+                        return "Se requieren al menos cuatro números.";
+                    }
+                    let respuesta;
+        
+                    const suma = numeros.reduce((acc, numero) => acc + numero, 0);
+                    const media = suma / numeros.length;
+                    const multiplicacionExtremos = numeros[0] * numeros[numeros.length - 1];
+                    const divisionExtremos = numeros[1] / numeros[numeros.length - 2];
+        
+                    return {
+                        suma: suma,
+                        media: media,
+                        multiplicacionExtremos: multiplicacionExtremos,
+                        divisionExtremos: divisionExtremos
+                    };
+                }
+        
+                // Ejemplo de uso
+                let resultados = operacionesNumericas(10, 5, 8, 2, 4);
+                console.log("Suma:", resultados.suma);
+                console.log("Media:", resultados.media);
+                console.log("Multiplicación del primero con el último:", resultado.multiplicacionExtremos);
+                console.log("División del segundo con el penúltimo:", resultado.divisionExtremos);
+        */
+
+        
+        /*
+        
+                function tirardados(veces) {
+        
+                    let max = 0;
+                    let dado1;
+                    let dado2;
+                    let respuesta;
+                    for (let index = 0; index < veces; index++) {
+                        dado1 = parseInt(Math.random() * 6)
+                        dado2 = parseInt(Math.random() * 6)
+        
+                        if ((dado1 + dado2) > max) {
+                            max = dado1 + dado2;
+                            respuesta = 'la mayor tirada es ' + dado1 + ' y ' + dado2;
+                        }
+                    }
+                    return respuesta;
+                }
+        
+               document.write( tirardados(5));
+        */
+
+        /*
+                function mismaspalabras(pala1, pala2) {
+                    let respuesta;
+                    let arr1 = [...pala1];
+                    let arr2=[...pala2];
+                    pala1=arr1.sort().toString();
+                    pala2=arr2.sort().toString();
+                    if (pala1==pala2) {
+                        respuesta=true;
+                    }else respuesta=false;
+        
+                    return respuesta;
+        
+        
+                }
+        
+        
+                document.write(mismaspalabras('casa','asac'))
+        */
+
+    </script>
+
+</body>
+
+</html>

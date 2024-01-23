@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUER</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        #activar2 {
+            padding: 10px;
+            width: 300px;
+
+        }
+
+        #invisible {
+            display: none;
+            color: black;
+            visibility: hidden;
+            background-color: gold;
+            padding: 10px;
+            border: 3px gray solid;
+            width: 300px;
+
+        }
+
+        #invisible2 {
+            display: none;
+            color: black;
+            visibility: hidden;
+            background-color: gold;
+            padding: 10px;
+            border: 3px gray solid;
+            width: 300px;
+
+        }
+
+
+        #activar2:hover #invisible2 {
+
+
+            visibility: visible;
+            display: block;
+
+        }
+
+        #menu {
+            list-style: none;
+            margin: 0px;
+       
+            width: 200px;
+            color: white;
+        }
+     
+
+        #menu li {
+            border: 2px solid black;
+            background-color: rebeccapurple;
+            padding: 10px;
+        }
+
+        #menu li ul {
+            list-style: none;
+            visibility: hidden;
+            display: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        #menu li ul li{
+            background-color: gold;
+            padding: 3px;
+            border: 1px black solid;
+        }
+        #menu  li:hover  ul {
+            visibility: visible;
+            display: block;
+        }
+        #menu ul li:hover::after{
+            content:">:D ";
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+
+style
+  a {
+            text-decoration-style: wavy;
+        }
+        fieldset {
+            background-color: rgba(56, 55, 55, 0.842);
+            border: none;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            margin-left: 30px;
+            float: left;
+            width: 80px;
+        }
+
+        legend {
+            font-size: 25x;
+            border-top: black solid;
+            border-right: black solid;
+            border-left: black solid;
+            border-bottom: black solid;
+            text-align: center;
+        }
+
+
+
+<legend>
+        maquetacion de formularios
+
+
+        <form action="" method="post">
+            <fieldset>
+                <label for="nombre">nombre: </label>
+                <input type="text" id="nombre" value="hoal">
+
+            </fieldset>
+            <fieldset>
+                <label for="sexo">sexo: </label>
+                <label for="hombre"> hombre: </label>
+                <input type="radio" id="hombre" name="sexo" value="hombre">
+                <label for="mujer"> mujer: </label>
+                <input type="radio" id="mujer" name="sexo" value="mujer">
+
+
+            </fieldset>
+
+            <fieldset>
+                <label for="des">descripcion</label>
+                <textarea name="des" id="des" cols="10" rows="10"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <input type="submit" value="enviar">
+
+            </fieldset>
+
+        </form>
+    </legend>
+
+         */
+    </script>
+
+    <ul id="menu">
+
+
+        <li> enlaces
+            <ul>
+                <li> <a href=""></a>google</li>
+                <li><a href=""></a>aula virtual </li>
+                <li><a href=""></a>facebook</li>
+                <li> <a href=""></a>onedrive</li>
+            </ul>
+
+        </li>
+        <li>historias
+            <ul>
+                <li>historia1</li>
+                <li>historia2 </li>
+            </ul>
+        </li>
+
+        <li>otros</li>
+
+        <li>mas</li>
+    </ul>
+
+
+
+
+
+
+
+    <div id="activar">
+        ponte encima para verlo
+        <div id="invisible">
+            ahora si se ve bro
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+
+
+    </script>
+
+
+</body>
+
+</html>

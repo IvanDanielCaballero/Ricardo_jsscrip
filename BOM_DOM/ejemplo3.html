@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUER</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #contenedor {
+
+            width: 50%;
+            height: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px gold solid;
+            text-align: center;
+            background-color: gray;
+            color: white;
+            font-size: 15px;
+
+        }
+        div{
+            background-color: yellowgreen;
+            border: 3px solid black;
+        }
+
+        #contenedor1 {
+
+            width: 50%;
+            height: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px gold solid;
+            text-align: center;
+            background-color: green;
+            color: white;
+            font-size: 15px;
+
+        }
+
+        .flotar {
+            width: 200px;
+            background-color: orange;
+            margin: 1em;
+            float: left;
+            float: right;
+        }
+
+        button {
+
+            border: 2px orangered solid;
+            background-color: yellow;
+            font-size: 30px;
+        }
+
+        span {
+            padding: 2px;
+
+            border: 1px solid rgb(184, 11, 184);
+            border-radius: 60px;
+            box-shadow: 10px 10px 10px black;
+            background-color: violet;
+            margin: 20px;
+        }
+
+        span:hover {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="contenedor">
+
+        <div class="flotar">flota</div>
+        <div class="flotar">flota</div>
+        <div class="flotar">flota</div>
+        <div class="flotar">flota</div>
+        <div class="flotar">flota</div>
+        <div class="flotar">flota</div>
+
+
+    </div>
+    <input type="color">
+
+
+
+
+    <span> cambia de color de fondo</span>
+    <span id="spandiv"> cambia de color de fondo de div</span>
+
+    <button> cambiar fondo</button>
+
+
+    <script>
+
+
+
+        let cambia = document.getElementsByTagName('button')[0];
+        cambia.addEventListener('click', cambiarfon)
+
+
+        let spancambiar = document.getElementsByTagName('span');
+        spancambiar[0].addEventListener('click', cambiarfon)
+
+
+        function cambiarfon(e) {
+            let eleccion = document.querySelectorAll('input')[0];
+            let contenedor = document.getElementById('contenedor');
+            contenedor.setAttribute('style', 'background-color:' + eleccion.value + '');
+
+        }
+
+
+        let cambiardiv = document.getElementById('spandiv');
+        cambiardiv.addEventListener('click', cambiarfondiv)
+
+        function cambiarfondiv(e){
+            let eleccion = document.querySelectorAll('input')[0];
+
+            let divflotar=document.getElementsByClassName('flotar')
+
+            for (let div of divflotar) {
+
+                div.setAttribute('style', 'background-color:' + eleccion.value + '')
+            }
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

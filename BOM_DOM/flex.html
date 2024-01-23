@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUER</title>
+
+    <style>
+        .contenedorflex {
+            display: flex;
+            border: 5px green solid;
+            background-color: black;
+            padding: 10px;
+            align-items: end;
+            height: 500px;
+
+        }
+
+        .contenedorflex div {
+
+            background-color: rgb(241, 241, 63);
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            font-size: 2em;
+         
+            border: 3px;
+        }
+
+        div {
+
+            background-color: gray;
+        }
+
+        .azul {
+
+            background-color: blue;
+
+        }
+
+        #alo {
+            align-self: center;
+        }
+
+        #hola {
+            align-self: self-start;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedorflex  nuevo">
+        <div id="hola">hola</div>
+        <div id="alo">hola</div>
+        <div >hola</div>
+        <div >hola</div>
+
+        <div>hola</div>
+        <div>hola</div>
+        <div>hola</div>
+        <div>hola</div>
+
+        <div>hola</div>
+        <div>hola</div>
+        <div>hola</div>
+        <div>hola</div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    <script>
+        let div1 = document.querySelector('div:first-child')
+        //div1.style.color = 'red';
+        //div1.style.backgroundColor = 'orange';
+        console.log(div1.className)
+        div1.classList.replace('nuevo', 'azul')
+
+
+
+
+        //o tambien puede ser:   div1.style['backgroundColor'] = 'orange';
+
+        let div2 = document.querySelector('div div:nth-child(2)')
+        div2.style.color = 'blue';
+    </script>
+
+
+</body>
+
+</html>

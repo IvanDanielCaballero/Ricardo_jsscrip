@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+
+    <script>
+
+        //hacer un aplicacion web que vaya pidiendo numeros 
+        let map = new Map();
+        let claves = 0;
+        const arrayrespue = Array();
+        var respuesta;
+
+
+
+        do {
+            respuesta = prompt("inserta un numero, cancelar para salir");
+            respuesta = respuesta == '' ? 'vacia' : respuesta;
+            respuesta = Number(respuesta);
+            if (!isNaN(respuesta) && respuesta) {
+
+                if (map.has(respuesta)) {
+                    map.set(respuesta, map.get(respuesta)++);
+                } else {
+                    map.set(respuesta, 1);
+                }
+
+
+            }
+            document.write(respuesta);
+        } while (respuesta != 0 && respuesta != null);
+
+        let total_numeros = 0;
+        let suma_productos = 0;
+        for ([i, v] of map) {
+            total_numeros += v;
+            document.write('<br> del elemento ' + i + ' hay ' + v)
+            suma_productos = suma_productos + i * v;
+        }
+        document.write(' <br> la media es' + suma_productos / total_numeros);
+
+
+
+
+
+        /*
+
+        respuesta = prompt("inserta un numero, cancelar para salir");
+        while (respuesta != 0 && respuesta != null) {
+
+            respuesta = respuesta == '' ? 'vacia' : respuesta;
+
+            if (!isNaN(respuesta)) {
+                map.set(claves, Number(respuesta));
+                claves++;
+
+            } else if (isNaN(respuesta)) {
+
+                document.write(respuesta + ' no es un numero');
+                break;
+            }
+            respuesta = prompt("inserta un numero, cancelar para salir");
+        }
+
+
+        for (let numero of map.values()) {
+            document.write(numero + ',');
+        }
+
+        var sumatotal = 0;
+        for (let numero of map.values()) {
+            sumatotal += Number(numero);
+
+        }
+        document.write(' <br> la suma total es ' + sumatotal + '<br>');
+
+
+        var media = 0;
+        media = (sumatotal / map.size);
+        document.write(' la media es ' + media + '<br>');
+
+
+
+
+
+        for (let numero of map.values()) {
+            arrayrespue.push(numero);
+        }
+
+
+
+        for (let e = 0; e < arrayrespue.length; e++) {
+            if (arrayrespue[i] == arrayrespue[e]) {
+
+            }
+        }
+        if (posiciones.length > 1) {
+            document.write(arrayrespue[i] + ' se repite ');
+
+            document.write('<br>');
+        }
+
+*/
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

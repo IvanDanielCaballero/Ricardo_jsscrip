@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clasificacion Ciclistas</title>
+
+    <style>
+        /*le da la dimension a la tabla*/
+        table {
+            width: 50%;
+            
+        }
+
+        /*modifica los bordes tanto el color como el grosor*/
+        th, td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: left; /*organiza el texto para que se encuentre en la  izquierda*/
+        }
+
+        th {
+            background-color: #12e928; /*le cambia el color de fondo solo a los th por eso la etiqueta*/
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        var ciclistas = [
+            [1, "Primoz Roglic", "Jumbo-visma", "3:36:40"],
+            [2, "Jonas vingengaard", "Jumbo-visma", "m.t"],
+            [3, "Sepp kuss", "Jumbo-visma", "+0:19"],
+            [4, "Mikel landa", "bahrain_victorious", "+0:19"],
+            [5, "Joao Almeida", "UAE Emirates", "+0:58"]
+        ];
+
+        document.write("<table border='1'>");
+
+        document.write("<caption>Etapa 17ª clasificacion</caption>");
+
+        document.write("<tr>", "<th>Posición</th>");
+        document.write("<th>Ciclista</th>");
+        document.write("<th>Equipo</th>");
+        document.write("<th>Tiempo</th>", "</tr>");
+
+
+
+
+//bucle para recorrer el array y el de su interior
+        for (var filas of ciclistas) {
+            document.write("<tr>");
+            for (var dato of filas) {
+                document.write("<td>" + dato + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+
+</body>
+
+</html>

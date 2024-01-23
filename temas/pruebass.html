@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        let nombres2 = ['ricardo', '$pepe', 'juan', 'adolfo'];
+
+
+
+        function lleva_caracter_raro(cadena) {
+            let respuesta;
+            for (let i in cadena.length()) {
+
+                if (cadena.charCodeat(i) < 65 && cadena.charCodeat(i) > 122) {
+                    respuesta = true;
+                } else respuesta = false;
+
+                return respuesta;
+            }
+        }
+
+
+
+        function filtar_alfabeto(array) {
+            let array_resulta = array.filter((cadena) => (lleva_caracter_raro(cadena))==true);
+            return array_resulta;
+        }
+
+
+
+
+        let arrayes=filtar_alfabeto(nombres2)
+        for (let e in arrayes) {
+            console.log(arrayes[e]);
+        }
+        
+
+
+
+
+
+
+
+
+
+        /*
+                function tirardados(veces) {
+        
+                    let max = 0;
+                    let dado1;
+                    let dado2;
+                    let respuesta;
+                    for (let index = 0; index < veces; index++) {
+                        dado1 = parseInt(Math.random() * 6)
+                        dado2 = parseInt(Math.random() * 6)
+        
+                        if ((dado1 + dado2) > max) {
+                            max = dado1 + dado2;
+                            respuesta = 'la mayor tirada es ' + dado1 + ' y ' + dado2;
+                        }
+                    }
+                    return respuesta;
+                }
+        
+               document.write( tirardados(5));
+        */
+
+        /*
+                function mismaspalabras(pala1, pala2) {
+                    let respuesta;
+                    let arr1 = [...pala1];
+                    let arr2=[...pala2];
+                    pala1=arr1.sort().toString();
+                    pala2=arr2.sort().toString();
+                    if (pala1==pala2) {
+                        respuesta=true;
+                    }else respuesta=false;
+        
+                    return respuesta;
+        
+        
+                }
+        
+        
+                document.write(mismaspalabras('casa','asac'))
+        */
+
+    </script>
+
+</body>
+
+</html>

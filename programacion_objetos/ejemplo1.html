@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clasificacion Ciclistas</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+
+        Array.prototype.media = function() {
+            
+            let suma=this.reduce((acum, valor)=>acum+valor)
+    
+            return suma/this.length;
+
+            
+        }
+
+
+        numeros = Array(4,5,6,8);
+
+        console.log(numeros.media());
+
+        /*
+                class Coordenadas {
+                    x = 0;
+                    y = 0;
+        
+                    constructor(x, y) {
+        
+                        this.x = isNaN(x) ? 0 : x;
+                        this.y = isNaN(y) ? 0 : y;
+        
+                    }
+        
+                    cambiar(x, y) {
+                        this.x = x;
+                        this.y = y;
+        
+                    }
+        
+                    copia() {
+                        let p = new Coordenadas(this.x, this.y);
+                        return p;
+                    }
+        
+                    iguales(p1) {
+        
+                        if (p1.x == this.x && p1.y == this.y) {
+                            return true;
+        
+                        } else {
+                            return false;
+        
+                        }
+                    }
+        
+                    suma(p1) {
+                        return (p1.x + this.x) + (p1.y + this.y);
+                    }
+        
+        
+                    distancia(p1) {
+                        let num = Math.sqrt((Math.pow(Math.abs(this.x - p1.x), 2)) +
+                            (Math.pow(Math.abs(this.y - p1.y), 2)))
+                        return num;
+        
+                    }
+        
+                    toString() {
+                        return console.log('x= ' + this.x + '   y=' + this.y)
+                    }
+        
+        
+        
+                }
+        
+        
+        
+        
+                let p1 = new Coordenadas(3, 4);
+                let p2 = new Coordenadas(10, 7);
+                // let p3 = new Coordenadas(10, 7);
+        
+        
+                //console.log(p1.distancia(p2));
+                console.log(p1.toString());
+        */
+
+    </script>
+
+</body>
+
+</html>

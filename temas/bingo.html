@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class carton {
+            tabla = [new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set(), new Set()];
+
+            constructor() {
+                let total = 0;
+                while (total < 18) {
+                    let num = Math.round(Math.random() * 89);
+                    let col = Math.floor(num / 10);
+                    if ((this.tabla[col].size < 2) && !(this.tabla[col].has(num+1))) {
+                    //    console.log(num+1,this.tabla[col].size,this.tabla[col].has(num+1))
+                        this.tabla[col].add(num + 1);
+                        total++
+                    }
+                }
+                let final=[];
+                for (let i in this.tabla){
+                    final.push(Array.from(this.tabla[i]).sort())
+                    final[i].splice(Math.round(Math.random() * 3), 0, 'nada')
+                }  
+                console.log(final)
+                this.tabla= new Array();
+                this.tabla=final
+            }
+            mostrar() {
+                console.log(this.tabla)
+            }
+
+            comprobar(num){
+                let col = Math.floor(num / 10);
+
+                 if (this.tabla[col].indexOf(num)==-1){
+                    alert("no esta")
+                 }else{
+                    alert("esta")
+                 }
+            }
+        }
+
+        let c1 = new carton();
+        c1.mostrar()
+
+    </script>
+</body>
+
+</html>

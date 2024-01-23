@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <label for="nombre">Introduce el nombre:</label>
+    <input id="nombre" name="nombre" type="text">
+    <br>
+    <label for="edad">Introduce la edad:</label>
+    <input id="edad" name="edad" type="text">
+    <br>
+    <label for="asignaturas">Introduce las asignaturas:</label>
+    <input id="asignaturas" name="asignaturas" type="text">
+
+    <button id="enviofor"> enviar formulario</button>
+    <br><br>
+
+    <button id="mostrar"> mostrar contenido </button>
+    <input id="posicion" name="posicion" type="number">
+
+    <script>
+        class Alumno {
+            nombre;
+            edad;
+            asignaturas = Array();
+
+            constructor(nombre, edad, asignaturas) {
+                this.nombre = nombre;
+                this.edad = edad;
+                this.asignaturas = asignaturas.split(",");
+
+            }
+
+            mostrarInformacion() {
+                document.write('nombre: ' + this.nombre + ' edad: ' + this.edad + ' asignaturas: ' + this.asignaturas + '<br>');
+            }
+
+            getnombre() {
+                return this.nombre;
+            }
+
+        }
+
+
+        let enviar = document.getElementById('enviofor');
+        enviar.addEventListener('click', obtenerdatos)
+        let mapalum = new Map();
+
+        function obtenerdatos(e) {
+            let nombre = document.getElementById("nombre").value;
+            let edad = document.getElementById("edad").value;
+            let asignaturas = document.getElementById("asignaturas").value;
+            let alumno1 = new Alumno(nombre, edad, asignaturas);
+            mapalum.set(nombre, alumno1);
+
+        }
+
+        let mostrar = document.getElementById('mostrar');
+        mostrar.addEventListener('click', mostrardatos)
+
+        function mostrardatos(e) {
+            let posicion = document.getElementById('posicion');
+            let escribir = document.getElementById('escribir');
+            let contador = 0;
+
+            if (posicion !== "" && posicion !== null && posicion !==undefined) {
+                mapalum.forEach((value) => {
+                    escribir.innerHTML = value.mostrarInformacion();
+                });
+            } else {
+
+                for (let alumn of mapalum.values()) {
+                    if (contador = posicion) {
+                        escribir.innerHTML = alumn.mostrarInformacion();
+                    }
+                    contador++;
+                }
+
+            }
+
+        }
+
+
+
+
+
+        alumno.mostrarInformacion();
+
+    </script>
+
+
+    <div id="escribir"> </div>
+</body>
+
+</html>

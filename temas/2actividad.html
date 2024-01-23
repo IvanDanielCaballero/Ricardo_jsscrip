@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+    <script>
+
+        /*
+        
+        
+                let primero = new Array(2);
+        
+                console.log(primero);
+        
+                let segundo = new Array(2, 3);
+        
+                console.log(segundo);
+        
+                let tercero = new Array("daniel");
+        
+                console.log(tercero);
+        
+        
+                ///////////////////////////////////////////////////7
+                let years = [2];
+                console.log(years);
+        
+        
+                let arreglos = [2, 4, "cuatro"];
+                console.log(arreglos);
+        
+        
+                ////////////////////////
+        
+                let personas = Array(7);
+        
+                let paises = Array(4);
+        
+                console.log(personas);
+        
+                console.log(paises);
+        
+                ///////////////////////////////////////////// acceso array normal
+        
+                arreglos[0] = "vamoss";
+        
+                console.log(arreglos);
+        
+                ////////////////crear array varias domensiones
+        
+                let d2 = [4][2];
+                let dd2 = [[2, 3], ['x', 'y']];
+        
+                console.log(d2);
+                console.log(dd2);
+                ///////////////////////////////////////////// acceso array bidimensional
+        
+                
+                console.log(dd2);
+                console.log(dd2[0][1]);
+        
+        
+                dd2[0][1] = "no puede ser";
+        
+                console.log(dd2);
+        
+        
+                /////////////////////////////// array tridimensional
+        
+                let dd3= [[[1,2],[3,4,5],[6,7,8]]];
+        
+                console.log(dd3);
+        
+                let cicilistas =Array(2);
+                cicilistas [0]=['kus', 'mano', 'bnom'];
+                cicilistas [1]=['maria', 'lore', 'cris'];
+        
+        
+                console.log(cicilistas);
+        
+     
+        ///////// recorrer array
+
+        var nombres2 = ["Ricardo", , "David"];
+        var nombre;
+
+        for (let index = 0; index < nombres2.length; index++) {
+
+            nombre = nombres2[index];
+
+
+            document.write("el elemento en la posicion", index, " es ", nombre, "<br>");
+
+        }
+
+        document.write("<br>", "ESTO ES EL FOR IN", "<br>");
+        for (let i in nombres2) {
+
+
+
+            document.write(`el elemento en la posicion ${i}  es  ${nombres2[i]} <br>`);
+
+        }
+
+
+        document.write("<br>", "ESTO ES EL FOR OF", "<br>");
+
+        for (let nombre of nombres2) {
+
+            document.write(`el elemento   es  ${nombre} <br>`);
+
+        }
+
+        ///// recorrer un array de dos dimensiones con for, for in y for of 
+
+*/
+        var datos = [[1, 2, 3, 4], [5, 6, 7, 8]];
+
+/*
+        for (var index1 = 0; index < datos.length; index++) {
+
+            for (var index2 = 0; index2 < datos[index1].length; index2++) {
+
+                document.write(datos[index1][index2]);
+            }
+
+        }
+
+
+
+    */
+             for (let i in datos) {
+     
+                 for (let i2 in datos[i]) {
+                     document.write(`el elemento es ${i},${i2}  ${datos[i][i2]} <br>`);
+     
+                 }
+     
+     
+     
+             }
+     
+     
+     
+     
+     /*
+
+
+
+        for (let numero of datos) {
+
+            for (let iterator of object) {
+
+            }
+
+            document.write(`el elemento es  ${datos[i][i2]} <br>`);
+
+        }
+
+*/
+
+    </script>
+
+</body>
+
+</html>

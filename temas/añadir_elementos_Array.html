@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+
+
+    <script>
+
+        let numeros = [1, 2, 3];
+
+        numeros[4] = 'ivan';
+        let posicion;
+        //añadir elemento al final
+
+        numeros.push(8);
+        posicion = numeros.push(9); // me da el numero de elementos q tengo
+
+        document.write(numeros, "<br>");
+        document.write("en la posicion ", posicion, "<br>");
+
+        //eliminar el ultimo elemento del array
+
+
+        document.write("<br>")
+        let numero = numeros.pop();
+        document.write(numero, " fue eliminado")
+
+
+        //añadir elemento al principio
+        document.write("<br>")
+        document.write("la antigua posicion es ", numeros.length, "<br>");
+        let unshiqq = numeros.unshift(0);
+        document.write("la nueva posicion es ", unshiqq, "<br>");
+        document.write(numeros, "<br>");
+
+        //elimina el primer elemento de un array
+        document.write("<br>")
+        let shif = numeros.shift();
+        document.write(shif, " fue eliminado")
+
+        /*
+        
+                hacer una pagina web q vaya pidiendo numeros hasta q pulsemos 
+                cancelar utilizando la funcion prompt
+                y debe guardarlos en un array y mostrar en orden inverso de dos formas diferentes
+                
+        
+        
+                */
+    </script>
+
+</body>
+
+</html>

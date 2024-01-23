@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propuesto 4.2</title>
+
+
+    <style>
+        table {
+           
+            border: 3px solid;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        
+        th,
+        td {
+            border: 1px solid green;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        function añadir_a_tabla(filas=10, columnas=4, colorborde='black') {
+
+            document.write('<table  border-color="'+colorborde+'">');
+            document.write('<caption>TABLA</caption>');
+          
+
+            for ($index = 0; $index < filas; $index++) {
+                document.write("<tr>");
+                for ($index2 = 0; $index2 < columnas; $index2++) {
+                    document.write('<td style="'+colorborde+'">' + ' ' + "</td>");
+                }
+                document.write("</tr>");
+            }
+
+            document.write('</table>');
+      
+         
+
+        }
+
+        for (let index = 0; index < 10; index++) {
+            añadir_a_tabla(5,4,'red');
+            document.write('<br>')
+            
+        }
+      
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
